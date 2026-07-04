@@ -1,0 +1,25 @@
+/* Minimal custom CSS on top of Bootstrap 5 (no custom utility classes, only what Bootstrap can't do). */
+
+/* Video technique: SEO text block written high in the HTML source,
+   repositioned visually below the "how it works" block via flex order. */
+.page-flow {
+    display: flex;
+    flex-direction: column;
+}
+
+.page-flow .seo-block {
+    order: 2;
+}
+
+.page-flow .how-it-works {
+    order: 1;
+}
+
+.phone-cta {
+    white-space: nowrap;
+}
+
+.hero-form-card {
+    position: sticky;
+    top: 1rem;
+}
