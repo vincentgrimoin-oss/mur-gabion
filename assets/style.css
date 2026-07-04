@@ -19,7 +19,76 @@
     white-space: nowrap;
 }
 
+/* Hero section: bold gradient background, badge pill, checklist, form card */
+.hero-gabion {
+    background: linear-gradient(135deg, #2f6bff 0%, #1747b3 100%);
+    color: #fff;
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: .4rem;
+    background: #ffcc33;
+    color: #402d00;
+    font-weight: 700;
+    font-size: .85rem;
+    padding: .45rem 1rem;
+    border-radius: 999px;
+    margin-bottom: 1.25rem;
+}
+
+.hero-checklist {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 1.5rem;
+}
+
+.hero-checklist li {
+    display: flex;
+    align-items: flex-start;
+    gap: .6rem;
+    margin-bottom: .65rem;
+    color: rgba(255, 255, 255, .95);
+}
+
+.hero-checklist li::before {
+    content: "✓";
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.4rem;
+    height: 1.4rem;
+    border-radius: 50%;
+    background: #ffcc33;
+    color: #1747b3;
+    font-weight: 700;
+    font-size: .8rem;
+    flex-shrink: 0;
+}
+
 .hero-form-card {
+    border-radius: 1rem;
+    border: none;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, .3);
     position: sticky;
     top: 1rem;
+}
+
+.trust-line {
+    font-size: .85rem;
+    color: #6c757d;
+}
+
+.btn-cta {
+    background: #ffcc33;
+    border-color: #ffcc33;
+    color: #402d00;
+    font-weight: 700;
+}
+
+.btn-cta:hover {
+    background: #ffc107;
+    border-color: #ffc107;
+    color: #402d00;
 }
