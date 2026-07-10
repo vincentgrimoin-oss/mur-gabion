@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /appel/
 
 Sitemap: https://mur-gabion.fr/sitemap.xml
