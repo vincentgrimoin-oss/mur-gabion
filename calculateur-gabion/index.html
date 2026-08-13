@@ -242,7 +242,14 @@
           <input type="hidden" name="redirect" value="https://mur-gabion.fr/merci/">
           <input type="hidden" name="subject" value="Demande de devis - Calculateur gabion">
           <input type="checkbox" name="botcheck" class="d-none" style="display:none;" tabindex="-1" autocomplete="off">
-          <input type="hidden" name="estimation" id="calc-estimation" value="">
+          <input type="hidden" name="Estimation calculateur" id="calc-estimation" value="">
+          <div class="border rounded-3 p-3 mb-4 bg-white">
+            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+              <span class="small text-muted"><i class="bi bi-rulers me-1"></i>Dimensions transmises avec votre demande</span>
+              <a href="#" class="small" id="calc-modifier">Modifier</a>
+            </div>
+            <div class="fw-bold mt-1" id="calc-recap"></div>
+          </div>
           <div class="row g-3">
             <div class="col-md-6">
               <label class="form-label">Nom et prénom</label>
@@ -254,11 +261,11 @@
             </div>
             <div class="col-md-6">
               <label class="form-label">Code postal du chantier</label>
-              <input type="text" name="code_postal" class="form-control" required>
+              <input type="text" name="Code postal du chantier" class="form-control" required>
             </div>
             <div class="col-md-6">
               <label class="form-label">Vous êtes</label>
-              <select name="profil" class="form-select" required>
+              <select name="Vous etes" class="form-select" required>
                 <option value="">Choisir...</option>
                 <option>Particulier</option>
                 <option>Professionnel (maçon, paysagiste, TP, étanchéité)</option>
@@ -266,7 +273,7 @@
             </div>
             <div class="col-12">
               <label class="form-label">Votre besoin</label>
-              <select name="besoin" class="form-select" required>
+              <select name="Votre besoin" class="form-select" required>
                 <option value="">Choisir...</option>
                 <option>Cages seules</option>
                 <option>Pierres seules</option>
@@ -335,11 +342,20 @@
     document.getElementById('out-cages').textContent = cages;
     document.getElementById('out-granulo').textContent = granulo;
 
-    document.getElementById('calc-estimation').value =
-      longueur + ' m x ' + hauteur + ' m x ' + (largeur * 100) + ' cm — ' +
-      fr(volume, 2) + ' m3, ' + fr(tonnes, 1) + ' t, ' +
-      bigbags + ' big bags, ' + cages + ' cages, granulometrie ' + granulo;
+    var recap =
+      longueur + ' m de long x ' + hauteur + ' m de haut x ' + (largeur * 100) + ' cm de large' +
+      ' — ' + fr(volume, 2) + ' m3 · ' + fr(tonnes, 1) + ' t de pierre · ' +
+      bigbags + ' big bags · ' + cages + ' cages · granulometrie ' + granulo;
+
+    document.getElementById('calc-estimation').value = recap;
+    document.getElementById('calc-recap').textContent = recap;
   }
+
+  document.getElementById('calc-modifier').addEventListener('click', function (e) {
+    e.preventDefault();
+    document.getElementById('calc-longueur').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    document.getElementById('calc-longueur').focus();
+  });
 
   inputs.forEach(function (el) {
     el.addEventListener('input', update);
