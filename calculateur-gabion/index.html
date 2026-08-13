@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculateur Gabion : Quantité de Pierre, Tonnage et Cages | Mur Gabion</title>
+<meta name="description" content="Calculez la quantité de pierre pour remplir un gabion : volume en m3, tonnage, nombre de big bags de 1000 kg et nombre de cages, a partir de vos dimensions.">
+<link rel="canonical" href="https://mur-gabion.fr/calculateur-gabion/">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Quelle quantité de pierre pour remplir un gabion ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La quantité se calcule en volume : longueur x hauteur x largeur du gabion donne le nombre de mètres cubes à remplir. On convertit ensuite ce volume en tonnes en appliquant une densité apparente d'environ 1,5 tonne par mètre cube pour de la pierre à gabion. Un gabion de 10 m de long, 1 m de haut et 30 cm de large représente 3 m3, soit environ 4,5 tonnes de pierre."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quelle pierre mettre dans un gabion ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Il faut une pierre non gélive et calibrée plus grosse que la maille du grillage. Les pierres les plus utilisées sont le calcaire concassé, le galet roulé et la pierre blanche décorative. Le concassé se cale mieux et se tasse moins, le galet roulé donne un rendu plus lisse mais laisse davantage de vides."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quelle granulométrie choisir pour un gabion ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La granulométrie doit toujours dépasser la plus petite dimension de la maille. Pour une maille courante de 5 x 10 cm, on utilise du 80/120 ou du 80/150. Une pierre trop petite traverse le grillage, une pierre trop grosse laisse des vides visibles et se cale mal dans les angles."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Combien de big bags de 1000 kg faut-il pour un gabion ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Un big bag standard contient 1000 kg, soit environ 0,65 m3 de pierre à gabion. Il faut donc compter environ 1,5 big bag par mètre cube de gabion à remplir. Au-dela de 5 à 10 tonnes, la livraison en vrac revient généralement moins cher que le big bag."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="/">Mur Gabion</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item"><a class="nav-link" href="/">Accueil</a></li>
+        <li class="nav-item"><a class="nav-link" href="/mur-de-soutenement-en-gabion/">Soutènement</a></li>
+        <li class="nav-item"><a class="nav-link" href="/cloture-en-gabion/">Clôture</a></li>
+        <li class="nav-item"><a class="nav-link" href="/prix-mur-gabion-devis/">Prix &amp; Devis</a></li>
+        <li class="nav-item"><a class="nav-link active" href="/calculateur-gabion/">Calculateur</a></li>
+        <li class="nav-item"><a class="nav-link" href="/faq-mur-gabion/">FAQ</a></li>
+      </ul>
+      <a href="/appel/" class="btn btn-primary text-nowrap"><i class="bi bi-telephone-fill me-1"></i>Devis gratuit</a>
+    </div>
+  </div>
+</nav>
+
+<section class="py-5 bg-primary bg-gradient text-white">
+  <div class="container">
+    <div class="row align-items-start gy-4">
+      <div class="col-lg-5">
+        <span class="badge rounded-pill bg-warning text-dark px-3 py-2 mb-3"><i class="bi bi-calculator me-1"></i>Outil gratuit</span>
+        <h1 class="display-6 fw-bold">Calculateur de gabion</h1>
+        <p class="lead">
+          Combien de pierre faut-il pour remplir un gabion ? Indiquez vos dimensions et obtenez
+          immédiatement le volume en mètres cubes, le tonnage de pierre, le nombre de big bags
+          de 1000 kg et le nombre de cages nécessaires.
+        </p>
+        <ul class="list-unstyled mt-4">
+          <li class="d-flex align-items-start mb-2"><i class="bi bi-check-circle-fill text-warning me-2 mt-1"></i><span>Tonnage et volume calculés instantanément</span></li>
+          <li class="d-flex align-items-start mb-2"><i class="bi bi-check-circle-fill text-warning me-2 mt-1"></i><span>Conversion en big bags de 1000 kg ou en vrac</span></li>
+          <li class="d-flex align-items-start mb-2"><i class="bi bi-check-circle-fill text-warning me-2 mt-1"></i><span>Nombre de cages standard à prévoir</span></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-7">
+        <div class="card border-0 shadow-lg rounded-4">
+          <div class="card-body p-4">
+            <h2 class="h5 mb-3">Vos dimensions</h2>
+
+            <div class="row g-3">
+              <div class="col-sm-4">
+                <label class="form-label" for="calc-longueur">Longueur (m)</label>
+                <input type="number" step="0.1" min="0" value="10" id="calc-longueur" class="form-control">
+              </div>
+              <div class="col-sm-4">
+                <label class="form-label" for="calc-hauteur">Hauteur (m)</label>
+                <input type="number" step="0.1" min="0" value="1" id="calc-hauteur" class="form-control">
+              </div>
+              <div class="col-sm-4">
+                <label class="form-label" for="calc-largeur">Largeur (cm)</label>
+                <select id="calc-largeur" class="form-select">
+                  <option value="10">10 cm (clôture fine)</option>
+                  <option value="20">20 cm</option>
+                  <option value="30" selected>30 cm</option>
+                  <option value="40">40 cm</option>
+                  <option value="50">50 cm (soutènement)</option>
+                </select>
+              </div>
+              <div class="col-sm-6">
+                <label class="form-label" for="calc-pierre">Type de pierre</label>
+                <select id="calc-pierre" class="form-select">
+                  <option value="1.4">Pierre blanche calcaire (~1,4 t/m³)</option>
+                  <option value="1.5" selected>Galet roulé (~1,5 t/m³)</option>
+                  <option value="1.6">Pierre concassée (~1,6 t/m³)</option>
+                </select>
+              </div>
+              <div class="col-sm-6">
+                <label class="form-label" for="calc-maille">Maille du grillage</label>
+                <select id="calc-maille" class="form-select">
+                  <option value="80/120" selected>5 x 10 cm</option>
+                  <option value="100/200">10 x 10 cm</option>
+                  <option value="60/90">5 x 5 cm</option>
+                </select>
+              </div>
+            </div>
+
+            <hr class="my-4">
+
+            <div class="row g-3 text-center">
+              <div class="col-6 col-lg-3">
+                <div class="border rounded-3 py-3 h-100">
+                  <div class="h3 fw-bold mb-0" id="out-volume">3,00</div>
+                  <div class="small text-muted">m³ à remplir</div>
+                </div>
+              </div>
+              <div class="col-6 col-lg-3">
+                <div class="border rounded-3 py-3 h-100 bg-warning-subtle">
+                  <div class="h3 fw-bold mb-0" id="out-tonnage">4,5</div>
+                  <div class="small text-muted">tonnes de pierre</div>
+                </div>
+              </div>
+              <div class="col-6 col-lg-3">
+                <div class="border rounded-3 py-3 h-100">
+                  <div class="h3 fw-bold mb-0" id="out-bigbags">5</div>
+                  <div class="small text-muted">big bags 1000 kg</div>
+                </div>
+              </div>
+              <div class="col-6 col-lg-3">
+                <div class="border rounded-3 py-3 h-100">
+                  <div class="h3 fw-bold mb-0" id="out-cages">20</div>
+                  <div class="small text-muted">cages 100 x 50 cm</div>
+                </div>
+              </div>
+            </div>
+
+            <p class="form-text mt-3 mb-0">
+              Granulométrie conseillée pour cette maille : <strong id="out-granulo">80/120</strong>.
+              Estimation indicative, à confirmer avec le fournisseur selon la pierre retenue :
+              la densité réelle varie avec la forme des pierres et le soin apporté au calage.
+            </p>
+
+            <a href="#devis" class="btn btn-warning fw-bold w-100 mt-4">
+              Recevoir un prix pour ces quantités <i class="bi bi-arrow-down"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container d-flex flex-column">
+  <section class="py-5">
+    <h2 class="h3 mb-3">Comment calculer la quantité de pierre d'un gabion</h2>
+    <p>
+      Le calcul se fait toujours en volume avant d'être converti en tonnes. On multiplie la
+      longueur par la hauteur par la largeur du gabion pour obtenir le nombre de mètres cubes,
+      puis on applique la densité apparente de la pierre. Pour de la pierre à gabion, cette
+      densité tourne autour de 1,5 tonne par mètre cube : la roche elle-même est bien plus
+      lourde, mais les vides entre les pierres représentent près d'un tiers du volume de la cage.
+      Un mur de 10 mètres de long, 1 mètre de haut et 30 centimètres de large représente donc
+      3 m³, soit environ 4,5 tonnes de pierre à commander.
+    </p>
+    <p>
+      Cette estimation reste indicative. Une pierre concassée anguleuse se cale plus densément
+      qu'un galet roulé et fait monter le tonnage, tandis qu'un remplissage soigné, pierre par
+      pierre sur les faces visibles, laisse moins de vides qu'un remplissage à la pelle. Prévoir
+      une marge de 5 à 10 % évite de devoir recommander une petite quantité en fin de chantier,
+      ce qui coûte cher en livraison.
+    </p>
+  </section>
+
+  <section class="py-5">
+    <h2 class="h3 mb-3">Quelle pierre et quelle granulométrie choisir</h2>
+    <p>
+      La règle de base est simple : la pierre doit être plus grosse que la plus petite dimension
+      de la maille, sinon elle traverse le grillage. Pour la maille la plus répandue, en
+      5 x 10 cm, on retient du 80/120 ou du 80/150. Trop grosse, la pierre laisse des vides
+      visibles et se cale mal dans les angles ; trop petite, elle s'échappe et le mur se creuse
+      avec le temps.
+    </p>
+    <p>
+      Le second critère est la résistance au gel. Une pierre gélive éclate au fil des hivers et
+      finit par se tasser à l'intérieur de la cage. Le calcaire dur, le granit et le basalte
+      conviennent ; certaines pierres tendres décoratives sont à éviter en extérieur exposé.
+      Enfin, le choix esthétique se joue entre le concassé, anguleux et brut, et le galet roulé,
+      plus doux visuellement, souvent utilisé en clôture ou en bordure de terrasse.
+    </p>
+  </section>
+
+  <section class="py-5">
+    <h2 class="h3 mb-3">Big bag ou livraison en vrac</h2>
+    <p>
+      Un big bag standard contient 1000 kg, soit environ 0,65 m³ de pierre à gabion : il faut
+      donc compter à peu près 1,5 big bag par mètre cube. Le big bag se justifie pour les petits
+      volumes, quand l'accès au chantier est difficile ou qu'il faut déposer la pierre à
+      plusieurs endroits. Dès que le chantier dépasse 5 à 10 tonnes, la livraison en vrac par
+      camion revient nettement moins cher à la tonne, à condition d'avoir une aire de dépose
+      accessible et de pouvoir manipuler la pierre sur place.
+    </p>
+  </section>
+</div>
+
+<section class="py-5 bg-light" id="devis">
+  <div class="container" style="max-width: 720px;">
+    <div class="card border-0 shadow-sm rounded-4">
+      <div class="card-body p-4">
+        <h2 class="h4 mb-1">Recevoir un prix pour ces quantités</h2>
+        <p class="text-muted mb-4">
+          Vos dimensions sont reprises automatiquement du calculateur. Chiffrage gratuit sous 48h,
+          détaillé entre les cages, les pierres et la pose.
+        </p>
+        <form action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="3280abd3-c7bb-4b3a-826a-b948847861eb">
+          <input type="hidden" name="redirect" value="https://mur-gabion.fr/merci/">
+          <input type="hidden" name="subject" value="Demande de devis - Calculateur gabion">
+          <input type="checkbox" name="botcheck" class="d-none" style="display:none;" tabindex="-1" autocomplete="off">
+          <input type="hidden" name="estimation" id="calc-estimation" value="">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label">Nom et prénom</label>
+              <input type="text" name="name" class="form-control" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Téléphone</label>
+              <input type="tel" name="phone" class="form-control" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Code postal du chantier</label>
+              <input type="text" name="code_postal" class="form-control" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Vous êtes</label>
+              <select name="profil" class="form-select" required>
+                <option value="">Choisir...</option>
+                <option>Particulier</option>
+                <option>Professionnel (maçon, paysagiste, TP, étanchéité)</option>
+              </select>
+            </div>
+            <div class="col-12">
+              <label class="form-label">Votre besoin</label>
+              <select name="besoin" class="form-select" required>
+                <option value="">Choisir...</option>
+                <option>Cages seules</option>
+                <option>Pierres seules</option>
+                <option>Cages + pierres</option>
+                <option>Fourniture + pose</option>
+                <option>Je ne sais pas encore</option>
+              </select>
+            </div>
+            <div class="col-12">
+              <label class="form-label">Précisions sur votre projet</label>
+              <textarea name="message" class="form-control" rows="3" placeholder="Ex : accès difficile, pierre blanche souhaitée, chantier prévu en septembre"></textarea>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-warning fw-bold w-100 mt-4">Obtenir mon devis gratuit <i class="bi bi-arrow-right"></i></button>
+          <p class="form-text mt-2 mb-0">
+            Vos données sont transmises à un professionnel en mesure de répondre à votre demande.
+            Voir notre <a href="/politique-de-confidentialite/">politique de confidentialité</a>.
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-dark text-white-50 py-4 mt-4">
+  <div class="container d-flex flex-wrap justify-content-between gap-3">
+    <div>
+      <strong class="text-white">Mur Gabion</strong> · Cages, pierres et pose de gabions
+    </div>
+    <div>
+      <a href="/mentions-legales/" class="text-white-50 me-3">Mentions légales</a>
+      <a href="/politique-de-confidentialite/" class="text-white-50">Politique de confidentialité</a>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+(function () {
+  var BIGBAG_KG = 1000;
+  var CAGE_L = 1.0;   // metres
+  var CAGE_H = 0.5;   // metres
+
+  var inputs = ['calc-longueur', 'calc-hauteur', 'calc-largeur', 'calc-pierre', 'calc-maille']
+    .map(function (id) { return document.getElementById(id); });
+
+  function fr(n, decimals) {
+    return n.toFixed(decimals).replace('.', ',');
+  }
+
+  function update() {
+    var longueur = parseFloat(document.getElementById('calc-longueur').value) || 0;
+    var hauteur = parseFloat(document.getElementById('calc-hauteur').value) || 0;
+    var largeur = parseFloat(document.getElementById('calc-largeur').value) / 100;
+    var densite = parseFloat(document.getElementById('calc-pierre').value);
+    var granulo = document.getElementById('calc-maille').value;
+
+    var volume = longueur * hauteur * largeur;
+    var tonnes = volume * densite;
+    var bigbags = Math.ceil(tonnes * 1000 / BIGBAG_KG);
+    var cages = Math.ceil(longueur / CAGE_L) * Math.ceil(hauteur / CAGE_H);
+
+    document.getElementById('out-volume').textContent = fr(volume, 2);
+    document.getElementById('out-tonnage').textContent = fr(tonnes, 1);
+    document.getElementById('out-bigbags').textContent = bigbags;
+    document.getElementById('out-cages').textContent = cages;
+    document.getElementById('out-granulo').textContent = granulo;
+
+    document.getElementById('calc-estimation').value =
+      longueur + ' m x ' + hauteur + ' m x ' + (largeur * 100) + ' cm — ' +
+      fr(volume, 2) + ' m3, ' + fr(tonnes, 1) + ' t, ' +
+      bigbags + ' big bags, ' + cages + ' cages, granulometrie ' + granulo;
+  }
+
+  inputs.forEach(function (el) {
+    el.addEventListener('input', update);
+    el.addEventListener('change', update);
+  });
+
+  update();
+})();
+</script>
+</body>
+</html>
