@@ -343,7 +343,8 @@
     document.getElementById('out-granulo').textContent = granulo;
 
     var recap =
-      longueur + ' m de long x ' + hauteur + ' m de haut x ' + (largeur * 100) + ' cm de large' +
+      String(longueur).replace('.', ',') + ' m de long x ' +
+      String(hauteur).replace('.', ',') + ' m de haut x ' + (largeur * 100) + ' cm de large' +
       ' — ' + fr(volume, 2) + ' m3 · ' + fr(tonnes, 1) + ' t de pierre · ' +
       bigbags + ' big bags · ' + cages + ' cages · granulometrie ' + granulo;
 
