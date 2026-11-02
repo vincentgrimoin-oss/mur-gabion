@@ -44,8 +44,8 @@
   </div>
 </nav>
 
-<section class="py-5 bg-primary bg-gradient text-white">
-  <div class="container">
+<section class="py-5 bg-primary bg-gradient text-white d-flex align-items-center" style="min-height: 95vh;">
+  <div class="container w-100">
     <div class="row align-items-center gy-4">
       <div class="col-lg-6 order-2 order-lg-1">
         <span class="badge rounded-pill bg-warning text-dark px-3 py-2 mb-3"><i class="bi bi-box-seam me-1"></i>Devis gratuit sous 48h</span>
@@ -80,23 +80,23 @@
               <div class="row g-2">
                 <div class="col-6">
                   <label class="form-label small mb-1">Nom et prénom</label>
-                  <input type="text" name="name" class="form-control form-control-sm" required>
+                  <input type="text" name="name" class="form-control" required>
                 </div>
                 <div class="col-6">
                   <label class="form-label small mb-1">Téléphone</label>
-                  <input type="tel" name="phone" class="form-control form-control-sm" required>
+                  <input type="tel" name="phone" class="form-control" required>
                 </div>
                 <div class="col-6">
                   <label class="form-label small mb-1">Email</label>
-                  <input type="email" name="email" class="form-control form-control-sm">
+                  <input type="email" name="email" class="form-control">
                 </div>
                 <div class="col-6">
                   <label class="form-label small mb-1">Code postal du chantier</label>
-                  <input type="text" name="Code postal du chantier" class="form-control form-control-sm" required>
+                  <input type="text" name="Code postal du chantier" class="form-control" required>
                 </div>
                 <div class="col-6">
                   <label class="form-label small mb-1">Vous êtes</label>
-                  <select name="Vous etes" class="form-select form-select-sm" required>
+                  <select name="Vous etes" class="form-select" required>
                     <option value="">Choisir...</option>
                     <option>Particulier</option>
                     <option>Professionnel (maçon, paysagiste, TP, étanchéité)</option>
@@ -104,7 +104,7 @@
                 </div>
                 <div class="col-6">
                   <label class="form-label small mb-1">Votre besoin</label>
-                  <select name="Votre besoin" class="form-select form-select-sm" required>
+                  <select name="Votre besoin" class="form-select" required>
                     <option value="">Choisir...</option>
                     <option>Cages seules</option>
                     <option>Pierres seules</option>
@@ -116,14 +116,14 @@
                 <div class="col-12">
                   <label class="form-label small mb-1">Dimensions approximatives <span class="text-muted">(facultatif)</span></label>
                   <div class="row g-2">
-                    <div class="col-4"><input type="number" step="0.1" min="0" name="Longueur (m)" class="form-control form-control-sm" placeholder="Long. m"></div>
-                    <div class="col-4"><input type="number" step="0.1" min="0" name="Hauteur (m)" class="form-control form-control-sm" placeholder="Haut. m"></div>
-                    <div class="col-4"><input type="number" step="1" min="0" name="Largeur (cm)" class="form-control form-control-sm" placeholder="Larg. cm"></div>
+                    <div class="col-4"><input type="number" step="0.1" min="0" name="Longueur (m)" class="form-control" placeholder="Long. m"></div>
+                    <div class="col-4"><input type="number" step="0.1" min="0" name="Hauteur (m)" class="form-control" placeholder="Haut. m"></div>
+                    <div class="col-4"><input type="number" step="1" min="0" name="Largeur (cm)" class="form-control" placeholder="Larg. cm"></div>
                   </div>
                 </div>
                 <div class="col-12">
                   <label class="form-label small mb-1">Votre projet</label>
-                  <textarea name="message" class="form-control form-control-sm" rows="2" placeholder="Ex : mur de soutènement 10m linéaire, hauteur 1m50"></textarea>
+                  <textarea name="message" class="form-control" rows="2" placeholder="Ex : mur de soutènement 10m linéaire, hauteur 1m50"></textarea>
                 </div>
               </div>
               <button type="submit" class="btn btn-warning fw-bold w-100 mt-3">Obtenir mon devis gratuit <i class="bi bi-arrow-right"></i></button>
