@@ -23,6 +23,14 @@
     },
     {
       "@type": "Question",
+      "name": "Combien pèse un mètre cube de pierre à gabion ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Entre 1,4 et 1,6 tonne par mètre cube, soit 1 400 à 1 600 kg. La roche elle-même pèse 2,5 à 2,7 tonnes au mètre cube, mais dans une cage les vides entre les pierres occupent près d'un tiers du volume : c'est donc la densité apparente qu'il faut retenir. On compte 1,4 t/m3 pour de la pierre blanche calcaire, 1,5 t/m3 pour du galet roulé et 1,6 t/m3 pour de la pierre concassée."
+      }
+    },
+    {
+      "@type": "Question",
       "name": "Quelle pierre mettre dans un gabion ?",
       "acceptedAnswer": {
         "@type": "Answer",
@@ -160,8 +168,17 @@
               </div>
             </div>
 
+            <div class="d-flex flex-wrap gap-3 justify-content-between align-items-center border-top mt-3 pt-3">
+              <span><i class="bi bi-box2-heart me-1 text-primary"></i>Poids de la pierre :
+                <strong id="out-densite">1,5 t/m³</strong>
+                <span class="text-muted">(<span id="out-densite-kg">1 500</span> kg par mètre cube)</span>
+              </span>
+              <span><i class="bi bi-grid-3x3 me-1 text-primary"></i>Granulométrie conseillée :
+                <strong id="out-granulo">80/120</strong>
+              </span>
+            </div>
+
             <p class="form-text mt-3 mb-0">
-              Granulométrie conseillée pour cette maille : <strong id="out-granulo">80/120</strong>.
               Estimation indicative, à confirmer avec le fournisseur selon la pierre retenue :
               la densité réelle varie avec la forme des pierres et le soin apporté au calage.
             </p>
@@ -194,6 +211,55 @@
       pierre sur les faces visibles, laisse moins de vides qu'un remplissage à la pelle. Prévoir
       une marge de 5 à 10 % évite de devoir recommander une petite quantité en fin de chantier,
       ce qui coûte cher en livraison.
+    </p>
+  </section>
+
+  <section class="py-5">
+    <h2 class="h3 mb-3">Combien pèse un mètre cube de pierre à gabion ?</h2>
+    <p>
+      Entre 1,4 et 1,6 tonne, soit 1 400 à 1 600 kg par mètre cube. C'est la source de confusion
+      la plus fréquente : la roche elle-même pèse 2,5 à 2,7 tonnes au mètre cube, mais dans une
+      cage les vides entre les pierres occupent près d'un tiers du volume. C'est donc la densité
+      apparente, dite en vrac, qu'il faut utiliser pour commander.
+    </p>
+    <div class="table-responsive">
+      <table class="table align-middle">
+        <thead>
+          <tr>
+            <th scope="col">Type de pierre</th>
+            <th scope="col">Poids au m³</th>
+            <th scope="col">En kilos</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Pierre blanche calcaire</td>
+            <td>1,4 t/m³</td>
+            <td>1 400 kg</td>
+          </tr>
+          <tr>
+            <td>Galet roulé</td>
+            <td>1,5 t/m³</td>
+            <td>1 500 kg</td>
+          </tr>
+          <tr>
+            <td>Pierre concassée (granit, basalte)</td>
+            <td>1,6 t/m³</td>
+            <td>1 600 kg</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p>
+      La granulométrie joue dans le même sens : une pierre très grosse, en 80/200 par exemple,
+      laisse davantage de vides qu'un 80/120 et tire la densité vers le bas de la fourchette.
+      Un calibre plus fin se cale mieux et la fait monter.
+    </p>
+    <p>
+      Deux repères utiles. Un gabion de 1 m de long, 1 m de haut et 30 cm de large représente
+      0,30 m³, soit 420 à 480 kg de pierre selon le type retenu. Et un big bag standard de
+      1000 kg contient environ 0,65 m³, ce qui revient à compter à peu près 1,5 big bag par
+      mètre cube à remplir.
     </p>
   </section>
 
@@ -341,6 +407,9 @@
     document.getElementById('out-bigbags').textContent = bigbags;
     document.getElementById('out-cages').textContent = cages;
     document.getElementById('out-granulo').textContent = granulo;
+    document.getElementById('out-densite').textContent = fr(densite, 1) + ' t/m\u00b3';
+    document.getElementById('out-densite-kg').textContent =
+      (densite * 1000).toLocaleString('fr-FR');
 
     var recap =
       String(longueur).replace('.', ',') + ' m de long x ' +
