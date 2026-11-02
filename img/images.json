@@ -1,0 +1,142 @@
+{
+  "mur-gabion-jardin-terrasse-escalier-provence": {
+    "file": "/img/mur-gabion-jardin-terrasse-escalier-provence.webp",
+    "width": 1200,
+    "height": 800,
+    "page": "accueil",
+    "alt": "Mur en gabion de soutènement le long d'un escalier de jardin en terrasses, entre lavandes et oliviers"
+  },
+  "mur-soutenement-gabion-talus-pelouse": {
+    "file": "/img/mur-soutenement-gabion-talus-pelouse.webp",
+    "width": 1200,
+    "height": 800,
+    "page": "soutenement",
+    "alt": "Mur de soutènement en gabion retenant une pelouse en haut d'un talus"
+  },
+  "gabion-soutenement-jardin-terrasses-oliviers": {
+    "file": "/img/gabion-soutenement-jardin-terrasses-oliviers.webp",
+    "width": 900,
+    "height": 600,
+    "page": "soutenement",
+    "alt": "Muret de soutènement en gabion sur plusieurs niveaux dans un jardin planté d'oliviers"
+  },
+  "gabion-galets-escalier-jardin": {
+    "file": "/img/gabion-galets-escalier-jardin.webp",
+    "width": 900,
+    "height": 600,
+    "page": "soutenement",
+    "alt": "Gabion rempli de galets accompagnant un escalier en dalles de béton"
+  },
+  "gabion-deux-niveaux-terrasse-colline": {
+    "file": "/img/gabion-deux-niveaux-terrasse-colline.webp",
+    "width": 1000,
+    "height": 666,
+    "page": "soutenement",
+    "alt": "Mur en gabion à deux niveaux formant une terrasse face à la colline"
+  },
+  "cloture-gabion-lames-bois-jardin": {
+    "file": "/img/cloture-gabion-lames-bois-jardin.webp",
+    "width": 1400,
+    "height": 933,
+    "page": "cloture",
+    "alt": "Clôture composée de piliers en gabion et de panneaux de lames de bois dans un jardin d'oliviers"
+  },
+  "cloture-gabion-galets-lames-bois": {
+    "file": "/img/cloture-gabion-galets-lames-bois.webp",
+    "width": 1000,
+    "height": 666,
+    "page": "cloture",
+    "alt": "Clôture alternant piliers en gabion de galets et lames de bois horizontales"
+  },
+  "cloture-gabion-pierre-lames-bois-allee": {
+    "file": "/img/cloture-gabion-pierre-lames-bois-allee.webp",
+    "width": 1000,
+    "height": 667,
+    "page": "cloture",
+    "alt": "Clôture en gabion de pierre et lames de bois le long d'une allée"
+  },
+  "detail-fixation-gabion-lames-bois": {
+    "file": "/img/detail-fixation-gabion-lames-bois.webp",
+    "width": 1200,
+    "height": 800,
+    "page": "cloture",
+    "alt": "Détail de la fixation entre un pilier en gabion et les lames de bois d'une clôture"
+  },
+  "detail-cloture-gabion-lames-bois-horizontales": {
+    "file": "/img/detail-cloture-gabion-lames-bois-horizontales.webp",
+    "width": 1200,
+    "height": 800,
+    "page": "cloture",
+    "alt": "Gros plan sur un pilier en gabion de pierre et des lames de bois horizontales"
+  },
+  "pierre-gabion-tas-et-big-bag": {
+    "file": "/img/pierre-gabion-tas-et-big-bag.webp",
+    "width": 1000,
+    "height": 666,
+    "page": "calculateur",
+    "alt": "Tas de pierre à gabion et big bag de livraison"
+  },
+  "pierre-blanche-gabion-tas-et-big-bag": {
+    "file": "/img/pierre-blanche-gabion-tas-et-big-bag.webp",
+    "width": 900,
+    "height": 600,
+    "page": "calculateur",
+    "alt": "Tas de pierre blanche calcaire et big bag de livraison"
+  },
+  "remplissage-cage-gabion-pierre-concassee": {
+    "file": "/img/remplissage-cage-gabion-pierre-concassee.webp",
+    "width": 900,
+    "height": 600,
+    "page": "prix",
+    "alt": "Remplissage d'une cage en gabion avec de la pierre concassée grise sur un chantier"
+  },
+  "montage-mur-gabion-remplissage-a-la-main": {
+    "file": "/img/montage-mur-gabion-remplissage-a-la-main.webp",
+    "width": 900,
+    "height": 600,
+    "page": "prix",
+    "alt": "Montage d'un mur en gabion : la pierre est placée à la main dans les cages"
+  },
+  "cages-gabion-vides-et-pierres-chantier": {
+    "file": "/img/cages-gabion-vides-et-pierres-chantier.webp",
+    "width": 900,
+    "height": 600,
+    "page": "prix",
+    "alt": "Cages de gabion vides à côté d'un mur déjà rempli et d'un tas de pierres"
+  },
+  "pierre-blanche-calcaire-gabion-gros-plan": {
+    "file": "/img/pierre-blanche-calcaire-gabion-gros-plan.webp",
+    "width": 1200,
+    "height": 800,
+    "page": "faq",
+    "alt": "Gros plan sur de la pierre blanche calcaire retenue par le grillage d'un gabion"
+  },
+  "galets-roules-gabion-gros-plan": {
+    "file": "/img/galets-roules-gabion-gros-plan.webp",
+    "width": 1000,
+    "height": 666,
+    "page": "faq",
+    "alt": "Cage de gabion remplie de galets roulés, vue de près"
+  },
+  "pierre-concassee-grise-gabion-gros-plan": {
+    "file": "/img/pierre-concassee-grise-gabion-gros-plan.webp",
+    "width": 1200,
+    "height": 800,
+    "page": "faq",
+    "alt": "Cage de gabion remplie de pierre concassée grise, vue de près"
+  },
+  "banc-gabion-assise-bois": {
+    "file": "/img/banc-gabion-assise-bois.webp",
+    "width": 900,
+    "height": 600,
+    "page": "reserve",
+    "alt": "Banc en gabion de galets surmonté d'une assise en bois dans un jardin sec"
+  },
+  "bordure-gabion-jardin-sec-galets": {
+    "file": "/img/bordure-gabion-jardin-sec-galets.webp",
+    "width": 900,
+    "height": 600,
+    "page": "reserve",
+    "alt": "Bordure basse en gabion de galets le long d'un massif de plantes méditerranéennes"
+  }
+}
